@@ -18,7 +18,6 @@
         <meta name="author" content="Abdullah al mamun">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         <title><%= htmlWebpackPlugin.options.title %></title>
 
     </head>
@@ -26,18 +25,20 @@
 <body>
 <main>
     <form>
-        <div class="title_wrapper">
-            <h1 class="todo_title">Today's To Do</h1>
-            <img src="" id="refreshImg" alt="">
+        <div class="title">
+            <h1>Today's To Do</h1>
+            <a id="reload" href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
         </div>
         <div class="data_input_wrapper">
-            <input type="text" placeholder="todo" class="data_input">
-            <img src="" id="enter" alt="enter">
+            <input type="text" placeholder="Add your list" class="data_input">
+            <a id="enter" href="#"> <i class="fa-solid fa-database"></i></a>
         </div>
-        <ul class="todo_list"></ul>
+        <ul id="items" class="todo_list"></ul>
         <input type="submit" hidden value="">
-        <button class="clear_completed">Clear Completed</button>
+        <button class="clear_completed">Clear all completed</button>
     </form>
 </main>
+
+<script src="https://kit.fontawesome.com/cddc9bcff3.js" crossorigin="anonymous"></script>
 </body>
 </html>

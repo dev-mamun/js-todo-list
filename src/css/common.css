@@ -22,12 +22,8 @@ body {
 
 button,
 input {
-  padding: 10px;
+  padding: 5px;
   outline: none;
-}
-
-input {
-  width: 100%;
 }
 
 .w-90 {

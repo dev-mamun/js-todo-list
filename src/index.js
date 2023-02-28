@@ -7,12 +7,14 @@
 import _ from 'lodash';
 import './style.css';
 import UI from './modules/Apps.js';
+import Todo from "./modules/Apps.js";
 
-function component() {
-  const element = document.createElement('div');
-  // Lodash, now imported by this script
+// function component() {
+//   const element = document.createElement('div');
+//   // Lodash, now imported by this script
+//   return element;
+// }
+// document.body.appendChild(component());
 
-  return element;
-}
-
-document.body.appendChild(component());
+const todo = new Todo;
+todo.show();
