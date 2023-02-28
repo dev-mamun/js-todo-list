@@ -1,10 +1,3 @@
-/******************************************
- * Project: js-todo-list
- * File: webpack.config.js
- * Created: 2/28/23
- * Author: Abdullah Al Mamun <mamun1214@gmail.com>
- *******************************************/
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -16,6 +9,11 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
+    port: 8080,
+    open: false,
+    compress: true,
+    hot: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -28,6 +26,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    assetModuleFilename: '[name][ext]',
   },
   optimization: {
     runtimeChunk: 'single',
@@ -49,6 +48,16 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },

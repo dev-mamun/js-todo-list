@@ -1,9 +1,3 @@
-/******************************************
- * Project: js-todo-list
- * File: Apps.js
- * Created: 2/28/23
- * Author: Abdullah Al Mamun <mamun1214@gmail.com>
- *******************************************/
 import sortArray from '../../node_modules/sort-array/dist/index.mjs';
 
 export default class Todo {
@@ -11,19 +5,19 @@ export default class Todo {
     this.items = [
       {
         index: 1,
-        description: "To Do One",
-        completed: true
+        description: 'To Do One',
+        completed: true,
       },
       {
         index: 3,
-        description: "To Do Three",
-        completed: true
+        description: 'To Do Three',
+        completed: true,
       },
       {
         index: 2,
-        description: "To Do Two",
-        completed: false
-      }
+        description: 'To Do Two',
+        completed: false,
+      },
     ];
   }
 
@@ -31,14 +25,12 @@ export default class Todo {
     const items = sortArray(this.items, {
       by: 'index',
     });
-    console.log(items);
     if (items != null) {
       items.forEach((item) => this.addItem(item));
     }
   };
 
   addItem = (item) => {
-    console.log(item);
     const list = document.getElementById('items');
     const li = document.createElement('li');
     li.innerHTML = `
@@ -48,5 +40,4 @@ export default class Todo {
         `;
     list.appendChild(li);
   }
-
 }
