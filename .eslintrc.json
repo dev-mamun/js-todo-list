@@ -2,6 +2,7 @@
   "env": {
     "browser": true,
     "es6": true,
+    "commonjs": true,
     "jest": true
   },
   "parser": "babel-eslint",
@@ -15,7 +16,7 @@
     "no-param-reassign": "off",
     "eol-last": "off",
     "import/extensions": [ 1, {
-      "js": "always", "json": "always"
+      "js": "always", "json": "always", "mjs": "always"
     }]
   },
   "ignorePatterns": [
