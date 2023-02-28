@@ -5,11 +5,7 @@
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ********************************************/
 
-body {
-  background-color: wheat;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "css/common.css";
 
-.hello {
-  color: red;
-  background: url('./globe.png');
-}
+

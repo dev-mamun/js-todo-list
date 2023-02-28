@@ -10,19 +10,34 @@
 <head>
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Mamun <mamun1214@gmail.com>">
         <meta name="description"
               content="I am Abdullah al mamun, A full-stack developer. Who can build both the front end and the back end of a website.">
+        <meta name="description" content="ToDo List using webpack">
         <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Ruby on Rails, Full-Stack">
         <meta name="author" content="Abdullah al mamun">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-        <title>ToDo List</title>
-
+        <title><%= htmlWebpackPlugin.options.title %></title>
 
     </head>
 </head>
 <body>
-
+<main>
+    <form>
+        <div class="title_wrapper">
+            <h1 class="todo_title">Today's To Do</h1>
+            <img src="" id="refreshImg" alt="">
+        </div>
+        <div class="data_input_wrapper">
+            <input type="text" placeholder="todo" class="data_input">
+            <img src="" id="enter" alt="enter">
+        </div>
+        <ul class="todo_list"></ul>
+        <input type="submit" hidden value="">
+        <button class="clear_completed">Clear Completed</button>
+    </form>
+</main>
 </body>
 </html>

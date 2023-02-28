@@ -1,0 +1,178 @@
+/**
+ * Project: softexpo
+ * File: common.css
+ * Created: 2/14/23
+ * Author: Abdullah Al Mamun <mamun1214@gmail.com>
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+button,
+input {
+  padding: 10px;
+  outline: none;
+}
+
+input {
+  width: 100%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+img {
+  width: 15vw;
+  height: 8vh;
+}
+
+.btn-success {
+  min-width: 100px;
+  height: 40px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  padding: 10px;
+  transition: 0.2s all;
+  background: #008552;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-success::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: 0.2s all;
+  left: 0;
+  z-index: -10;
+}
+
+.btn-success:hover {
+  color: #fff;
+  border-color: #36b37f;
+  background: #c5e9da !important;
+}
+
+.btn-success:active {
+  background: #ebf0ee;
+}
+
+.btn-success:hover::before {
+  height: 100%;
+}
+
+.btn-danger {
+  min-width: 100px;
+  height: 40px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 10px;
+  transition: 0.2s all;
+  background: #ef523c;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-danger::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: 0.2s all;
+  left: 0;
+  z-index: -10;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  border-color: rgb(239 82 60);
+  background: rgb(239 82 60 / 54%) !important;
+}
+
+.btn-danger:active {
+  background: #e1270d;
+}
+
+.btn-danger:hover::before {
+  height: 100%;
+}
+
+.btn-default {
+  min-width: 100px;
+  height: 40px;
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  padding: 10px;
+  transition: 0.2s all;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.btn-default::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: 0.2s all;
+  left: 0;
+  z-index: -10;
+}
+
+.btn-default:hover {
+  color: black;
+  border-color: rgb(181 181 181);
+  background: rgb(253 253 253) !important;
+}
+
+.btn-default:active {
+  background: rgb(155 155 155);
+}
+
+.btn-default:hover::before {
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}

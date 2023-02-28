@@ -27,7 +27,7 @@
 # 📖 To DO List <a name="about-project"></a>
 
 > Organize your work and life, finally. Become focused, organized, and calm with Todolist.
-> it uses modular architechture aswell as webpack.
+> It simply lists the things that you need to do and allows you to mark them as complete.
 
 ### 🛠 Tech Stack <a name="tech-stack"></a>
 
