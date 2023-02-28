@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-- [Tech Stack](#tech-stack)
+- [🛠 Tech Stack](#tech-stack)
 - [Key Features](#key-features)
 - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
