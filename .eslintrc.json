@@ -15,7 +15,7 @@
     "no-param-reassign": "off",
     "eol-last": "off",
     "import/extensions": [ 1, {
-      "js": "always", "json": "always", "mjs": "always"
+      "js": "always", "json": "always"
     }]
   },
   "ignorePatterns": [
