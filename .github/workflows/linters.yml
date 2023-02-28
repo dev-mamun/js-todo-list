@@ -54,6 +54,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+      - name: html-webpack-plugin
+        run: |
+          npm install html-webpack-plugin
       - name: Setup ESLint
         run: |
           npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
