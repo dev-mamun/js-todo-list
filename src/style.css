@@ -1,0 +1,15 @@
+/********************************************
+ * Project: js-todo-list
+ * File: style.css
+ * Created: 2/28/23
+ * Author: Abdullah Al Mamun <mamun1214@gmail.com>
+ ********************************************/
+
+body {
+  background-color: wheat;
+}
+
+.hello {
+  color: red;
+  background: url('./globe.png');
+}
