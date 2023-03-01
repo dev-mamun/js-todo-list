@@ -137,7 +137,7 @@ To check for js errors run:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--  Make it interactive
+-  N/A
 
 
 <!-- CONTRIBUTING -->
