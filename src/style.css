@@ -87,7 +87,7 @@ form > * {
   border-bottom: 0.5px solid #ccc;
 }
 
-.todo_list .todo_check {
+.todo_list .checkbox {
   margin: auto;
 }
 
@@ -120,7 +120,7 @@ form > * {
 }
 
 /* Linter */
-.todo_check:checked + .todo_input {
+.checkbox:checked + .todo_input {
   text-decoration: line-through;
 }
 
