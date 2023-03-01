@@ -9,6 +9,7 @@
 @import "css/common.css";
 
 main {
+  margin-top: 30px;
   min-height: 350px;
   display: grid;
   place-items: center;
@@ -96,7 +97,7 @@ form > * {
   border: none;
 }
 
-.todo_list li .trashImg {
+.todo_list li .delete {
   width: 28px;
   height: 28px;
   margin: auto;

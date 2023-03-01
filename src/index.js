@@ -1,5 +1,13 @@
+/** ****************************************
+ * Project: js-todo-list
+ * File: index.js
+ * Created: 2/28/23
+ * Author: Abdullah Al Mamun <mamun1214@gmail.com>
+ ****************************************** */
+
 import './style.css';
 import Todo from './modules/Apps.js';
+
 /* import _ from 'lodash';
 function component() {
   const element = document.createElement('div');
@@ -8,5 +16,8 @@ function component() {
 }
 document.body.appendChild(component()); */
 
-const todo = new Todo();
-todo.show();
+window.addEventListener('load', () => {
+  const todo = new Todo();
+  todo.show();
+  todo.events();
+});

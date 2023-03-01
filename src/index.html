@@ -24,18 +24,17 @@
 </head>
 <body>
 <main>
-    <form>
-        <div class="title">
+    <form method="post">
+        <div id="title" class="title">
             <h1>Today's To Do</h1>
             <a id="reload" href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
         </div>
         <div class="data_input_wrapper">
-            <input type="text" placeholder="Add your list" class="data_input">
+            <input id="create" name="todo" type="text" placeholder="Add your list" class="data_input" value="">
             <a id="enter" href="#"> <i class="fa-solid fa-database"></i></a>
         </div>
         <ul id="items" class="todo_list"></ul>
-        <input type="submit" hidden value="">
-        <button class="clear_completed">Clear all completed</button>
+        <button type="button" id="clearall" class="clear_completed">Clear all completed</button>
     </form>
 </main>
 
