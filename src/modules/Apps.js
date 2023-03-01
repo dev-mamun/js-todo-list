@@ -29,6 +29,12 @@ export default class Apps {
       }
     });
     // Delete a task
+    this.deleteEvent();
+    // Change item
+    this.changeEvent();
+  };
+
+  deleteEvent = () => {
     const $tasks = document.querySelectorAll('.delete');
     $tasks.forEach((btn) => {
       btn.addEventListener('click', (e) => {
@@ -37,7 +43,9 @@ export default class Apps {
         e.target.parentNode.remove();
       });
     });
-    // Change item
+  };
+
+  changeEvent = () => {
     const $inputs = document.querySelectorAll('.todo_input');
     $inputs.forEach((input) => {
       input.addEventListener('click', (e) => {
@@ -93,6 +101,8 @@ export default class Apps {
     const $item = new Todo($data, false, this.items.length + 1);
     this.saveItems($item);
     this.addItem($item);
+    this.deleteEvent();
+    this.changeEvent();
   };
 
   update = ($desc, $id) => {
