@@ -10,19 +10,34 @@
 <head>
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Mamun <mamun1214@gmail.com>">
         <meta name="description"
               content="I am Abdullah al mamun, A full-stack developer. Who can build both the front end and the back end of a website.">
+        <meta name="description" content="ToDo List using webpack">
         <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Ruby on Rails, Full-Stack">
         <meta name="author" content="Abdullah al mamun">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         <title>ToDo List</title>
-
 
     <script defer src="runtime.bundle.js"></script><script defer src="app.bundle.js"></script></head>
 </head>
 <body>
+<main>
+    <form method="post">
+        <div id="title" class="title">
+            <h1>Today's To Do</h1>
+            <a id="reload" href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
+        </div>
+        <div class="data_input_wrapper">
+            <input id="create" name="todo" type="text" placeholder="Add your list" class="data_input" value="">
+            <a id="enter" href="#"> <i class="fa-solid fa-database"></i></a>
+        </div>
+        <ul id="items" class="todo_list"></ul>
+        <button type="button" id="clearall" class="clear_completed">Clear all completed</button>
+    </form>
+</main>
 
+<script src="https://kit.fontawesome.com/cddc9bcff3.js" crossorigin="anonymous"></script>
 </body>
 </html>
