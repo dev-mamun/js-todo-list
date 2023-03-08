@@ -5,10 +5,12 @@
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
 
-import sortArray from '../../node_modules/sort-array/dist/index.mjs';
+//import sortArray from '../../node_modules/sort-array/dist/index.mjs';
 import Todo from './Todo.js';
 import Notify from './Notification.js';
 import Status from './Status.js';
+
+const sortArray = require("sort-array/dist");
 
 export default class Apps {
   constructor() {
@@ -154,6 +156,14 @@ export default class Apps {
   };
 
   delete = ($id) => {
+    this.deleteItem($id);
+    this.show();
+    this.changeEvent();
+    this.changeStatus();
+    this.deleteEvent();
+  };
+
+  deleteItem = ($id) => {
     this.items = this.items.filter((item) => $id !== item.index);
     this.items.forEach((item) => {
       if (item.index >= $id) {
@@ -161,12 +171,7 @@ export default class Apps {
       }
     });
     this.saveStorage(this.items);
-    this.show();
-    this.changeEvent();
-    this.changeStatus();
-    this.deleteEvent();
-  };
-
+  }
   saveStorage = ($items) => {
     localStorage.setItem('items', JSON.stringify($items));
   };
