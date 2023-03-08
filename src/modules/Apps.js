@@ -4,13 +4,11 @@
  * Created: 2/28/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
+import Todo from './Todo';
+import Notify from './Notification';
+import Status from './Status';
 
-//import sortArray from '../../node_modules/sort-array/dist/index.mjs';
-import Todo from './Todo.js';
-import Notify from './Notification.js';
-import Status from './Status.js';
-
-const sortArray = require("sort-array/dist");
+const sortArray = require('sort-array/dist');
 
 export default class Apps {
   constructor() {
@@ -171,7 +169,8 @@ export default class Apps {
       }
     });
     this.saveStorage(this.items);
-  }
+  };
+
   saveStorage = ($items) => {
     localStorage.setItem('items', JSON.stringify($items));
   };

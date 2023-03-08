@@ -4,7 +4,7 @@
  * Created: 3/8/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
-import Todo from './modules/Apps.js';
+import Todo from './modules/Apps';
 
 const todo = new Todo();
 describe('delete item', () => {

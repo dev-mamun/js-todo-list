@@ -4,16 +4,12 @@
  * Created: 3/8/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
-/**
- * @jest-environment jsdom
- */
-
-import Todo from './modules/Apps.js';
+import Todo from './modules/Apps';
 
 const todo = new Todo();
 describe('Add function', () => {
   it('Store item in local storage', () => {
-    todo.saveItems('jest test')
+    todo.saveItems('jest test');
     expect(todo.getItems()).toBeDefined();
   });
 
