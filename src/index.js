@@ -6,7 +6,7 @@
  ****************************************** */
 
 import './style.css';
-import Todo from './modules/Apps.js';
+import Todo from './modules/Apps';
 
 /* import _ from 'lodash';
 function component() {

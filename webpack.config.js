@@ -6,9 +6,11 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
     port: 8080,
     open: false,
     compress: true,
@@ -19,7 +21,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'ToDo List',
       filename: 'index.html',
-      template: './src/index.html',
+      template: 'src/index.html',
     }),
   ],
   output: {
