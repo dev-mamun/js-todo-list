@@ -8,19 +8,21 @@ import Apps from './modules/Apps';
 import Todo from './modules/Todo';
 
 const mockLi = () => {
-  const ul = document.createElement('ul');
-  ul.className = 'todo_list';
-  ul.id = 'items';
-  document.querySelector('body').appendChild(ul);
+  const $ul = document.createElement('ul');
+  $ul.className = 'todo_list';
+  $ul.id = 'items';
+  document.querySelector('body').appendChild($ul);
 
-  const li = document.createElement('li');
-  li.className = 'todo_input';
-  document.getElementById('items').appendChild(li);
+  const $li = document.createElement('li');
+  $li.className = 'todo_input';
+  document.getElementById('items').appendChild($li);
 
-  const checkbox = document.createElement('input');
-  checkbox.className = 'checkbox';
-  checkbox.type = 'checkbox';
-  checkbox.dataset.id = '1';
+  const $checkbox = document.createElement('input');
+  $checkbox.id = 'complete';
+  $checkbox.className = 'checkbox';
+  $checkbox.type = 'checkbox';
+  $checkbox.dataset.id = '1';
+  $li.appendChild($checkbox);
 
   const $input = document.createElement('input');
   $input.className = 'todo_input';
@@ -28,14 +30,19 @@ const mockLi = () => {
   $input.type = 'text';
   $input.value = 'Jest Test';
   $input.dataset.id = '1';
+  $li.appendChild($input);
 
   const $i = document.createElement('i');
   $i.className = 'fa-regular fa-trash-can delete';
   $i.dataset.id = '1';
+  $li.appendChild($i);
 
-  li.appendChild(checkbox);
-  li.appendChild($input);
-  li.appendChild($i);
+  const $button = document.createElement('button');
+  $button.type = 'button';
+  $button.id = 'clearall';
+  $button.className = 'clear_completed';
+  $button.textContent = 'Clear all completed';
+  document.querySelector('body').appendChild($button);
 };
 
 beforeAll(() => {
