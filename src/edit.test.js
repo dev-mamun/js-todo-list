@@ -15,8 +15,6 @@ const mockLi = () => {
 
   const li = document.createElement('li');
   li.className = 'todo_input';
-  li.setAttribute('data-valid', 'false');
-  li.setAttribute('data-id', '1');
   document.getElementById('items').appendChild(li);
 
   const checkbox = document.createElement('input');
@@ -46,12 +44,11 @@ beforeAll(() => {
 });
 
 describe('Edit function', () => {
-  const apps = new Apps();
-  const desc = 'This is changed item';
-  const $item = new Todo('Jest Test', false, 1);
-  apps.saveItems($item);
-
   it('Edit Stored item', () => {
+    const apps = new Apps();
+    const desc = 'This is changed item';
+    const $item = new Todo('Jest Test', false, 1);
+    apps.saveItems($item);
     const $inputs = document.getElementById('todo_input');
     $inputs.addEventListener('click', (e) => {
       apps.update(desc, parseInt(e.target.dataset.id, 16));
