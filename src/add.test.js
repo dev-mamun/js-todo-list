@@ -4,16 +4,20 @@
  * Created: 3/8/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
-import Todo from './modules/Apps';
+import Apps from './modules/Apps';
+import Todo from './modules/Todo';
 
-const todo = new Todo();
 describe('Add function', () => {
+  const apps = new Apps();
+  const desc = 'Jest Test';
+  const $item = new Todo(desc, false, 1);
+  apps.saveItems($item);
+  const $items = apps.getItems();
   it('Store item in local storage', () => {
-    todo.saveItems('jest test');
-    expect(todo.getItems()).toBeDefined();
+    expect($items[0].description).toBe(desc);
   });
 
   it('Get items from local storage', () => {
-    expect(todo.getItems()).not.toBeNull();
+    expect($items).not.toBeNull();
   });
 });

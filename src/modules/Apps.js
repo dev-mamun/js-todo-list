@@ -37,13 +37,7 @@ export default class Apps {
       const $checked = document.querySelectorAll('.checkbox:checked');
       $checked.forEach((input) => {
         input.parentNode.remove();
-        this.items = this.items.filter((item) => item.completed !== true);
-        let count = 1;
-        this.items.forEach((item) => {
-          item.index = count;
-          count += 1;
-        });
-        this.saveStorage(this.items);
+        this.clearComplete();
       });
     });
     // Delete a task
@@ -53,6 +47,16 @@ export default class Apps {
     // Update task status
     this.changeStatus();
   };
+
+  clearComplete = () => {
+    this.items = this.items.filter((item) => item.completed !== true);
+    let count = 1;
+    this.items.forEach((item) => {
+      item.index = count;
+      count += 1;
+    });
+    this.saveStorage(this.items);
+  }
 
   deleteEvent = () => {
     this.controller = new AbortController();
